@@ -472,8 +472,8 @@ jobs:
               pushd ./flutter
               flutter pub get
               dart run flutter_launcher_icons
+              popd
             fi
-            popd
 
             # Change files names in the output .deb
             sed -ie "s|\(cp .* \)tmpdeb/usr/share/rustdesk/files/systemd/|\1tmpdeb/usr/share/rustdesk/files/systemd/${{ inputs.filename }}.service|g" build.py
