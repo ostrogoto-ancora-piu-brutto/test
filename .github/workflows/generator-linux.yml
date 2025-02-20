@@ -463,7 +463,7 @@ jobs:
             export DEB_ARCH=${{ matrix.job.deb_arch }}
             mkdir -p flutter/tmpdeb/usr/lib/${{ inputs.filename }}
             cp ./custom.txt ./flutter/tmpdeb/usr/lib/${{ inputs.filename }}/custom.txt
-            if [[ ${{ hashFiles('repository/img/logo.png') }} -ne "" ]]; then
+            if [[ "${{ hashFiles('repository/img/logo.png') }}" -ne "" ]]; then
               cp repository/img/logo.png ./flutter/assets/logo.png
               mv ./flutter/assets/icon.svg ./flutter/assets/icon.svg.bak
               convert ./res/icon.png ./flutter/assets/icon.svg

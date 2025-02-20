@@ -432,7 +432,7 @@ jobs:
             cp ./target/${{ matrix.job.target }}/release/liblibrustdesk.so ./flutter/android/app/src/main/jniLibs/arm64-v8a/librustdesk.so
             echo -n "${{ inputs.custom }}" | cat > ./flutter/assets/custom.txt
             #sed -i '/^    - assets\//a\    - assets/custom.txt' ./flutter/pubspec.yaml
-            if [[  ${{ hashFiles('repository/img/logo.png') }} -ne "" ]]; then
+            if [[ "${{ hashFiles('repository/img/logo.png') }}" -ne "" ]]; then
               mv ./flutter/assets/icon.svg ./flutter/assets/icon.svg.bak
               convert ./res/icon.png ./flutter/assets/icon.svg
               convert ./res/128x128.png -resize 200% ./flutter/assets/128x128@2x.png
@@ -449,7 +449,7 @@ jobs:
               cp ./target/${{ matrix.job.target }}/release/liblibrustdesk.so ./flutter/android/app/src/main/jniLibs/armeabi-v7a/librustdesk.so
               echo -n "${{ inputs.custom }}" | cat > ./flutter/assets/custom.txt
               #sed -i '/^    - assets\//a\    - assets/custom.txt' ./flutter/pubspec.yaml
-              if [[  ${{ hashFiles('repository/img/logo.png') }} -ne "" ]]; then
+              if [[ "${{ hashFiles('repository/img/logo.png') }}" -ne "" ]]; then
                 mv ./flutter/assets/icon.svg ./flutter/assets/icon.svg.bak
                 convert ./res/icon.png ./flutter/assets/icon.svg
                 convert ./res/128x128.png -resize 200% ./flutter/assets/128x128@2x.png
@@ -466,7 +466,7 @@ jobs:
               cp ./target/${{ matrix.job.target }}/release/liblibrustdesk.so ./flutter/android/app/src/main/jniLibs/x86_64/librustdesk.so
               echo -n "${{ inputs.custom }}" | cat > ./flutter/assets/custom.txt
               #sed -i '/^    - assets\//a\    - assets/custom.txt' ./flutter/pubspec.yaml
-              if [[  ${{ hashFiles('repository/img/logo.png') }} -ne "" ]]; then
+              if [[ "${{ hashFiles('repository/img/logo.png') }}" -ne "" ]]; then
                 mv ./flutter/assets/icon.svg ./flutter/assets/icon.svg.bak
                 convert ./res/icon.png ./flutter/assets/icon.svg
                 convert ./res/128x128.png -resize 200% ./flutter/assets/128x128@2x.png
@@ -483,7 +483,7 @@ jobs:
               cp ./target/${{ matrix.job.target }}/release/liblibrustdesk.so ./flutter/android/app/src/main/jniLibs/x86/librustdesk.so
               echo -n "${{ inputs.custom }}" | cat > ./flutter/assets/custom.txt
               #sed -i '/^    - assets\//a\    - assets/custom.txt' ./flutter/pubspec.yaml
-              if [[  ${{ hashFiles('repository/img/logo.png') }} -ne "" ]]; then
+              if [[ "${{ hashFiles('repository/img/logo.png') }}" -ne "" ]]; then
                 mv ./flutter/assets/icon.svg ./flutter/assets/icon.svg.bak
                 convert ./res/icon.png ./flutter/assets/icon.svg
                 convert ./res/128x128.png -resize 200% ./flutter/assets/128x128@2x.png
